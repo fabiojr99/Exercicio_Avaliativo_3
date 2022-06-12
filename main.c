@@ -4,11 +4,12 @@
 #include <string.h>
 
 int main(void) {  
-  char PalavraVelha[100];
+  char PalavraVelha[1000];
   int Tamanho = 0;
   char LetraVelha;
   char LetraNova;
-  char PalavraNova[100];
+  char PalavraNova[1000];
+  int quantidade = 0;
   
   printf("Usuario, insira a palavra\n");
   scanf("%s", PalavraVelha);
@@ -21,7 +22,7 @@ int main(void) {
 
   TrocaCaractere (&PalavraVelha, &Tamanho, LetraVelha, LetraNova, &PalavraNova);
 
-  int quantidade = ContaTrocas (PalavraVelha, LetraVelha);
+  strcpy(quantidade, ContaTrocas (PalavraVelha, LetraVelha));
 
   printf("%s \n %s \n %i",PalavraNova, PalavraVelha, quantidade);
 
