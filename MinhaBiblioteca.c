@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int ContaTrocas (char mensagem_inicial[], char caractere_trocado, int contador_de_trocas)
+int ContaTrocas (char mensagem_inicial[], char caractere_trocado)
 {
+  int contador_de_trocas;
     for (int i=0;i<strlen(mensagem_inicial);i++)
     {  
         if (mensagem_inicial[i] == caractere_trocado)
@@ -18,16 +19,17 @@ int ContaTrocas (char mensagem_inicial[], char caractere_trocado, int contador_d
 
 void TrocaCaractere (char* mensagem_inicial[], int* contador_de_elementos, char caractere_velho, char caractere_novo, char* mensagem_final[])
 {
-    contador_de_elementos -> strlen(mensagem_inicial);
-
-    i=0;
-    while(mensagem_inicial[i] != '\0')
+  contador_de_elementos = strlen(mensagem_inicial);
+  int i;
+  for (i=0; i < strlen(mensagem_inicial); i++)
+  {
+    if (mensagem_inicial[i] == caractere_velho)
     {
-        switch (mensagem_inicial[i])
-        {
-        case caractere_velho: mensagem_inicial[i] -> caractere_novo; break;
-        default:; break;
-        }
-        i++;
+      mensagem_final[i] = caractere_novo;
     }
+    else 
+    {
+      mensagem_final[i] = mensagem_inicial[i];
+    }
+  }
 }
