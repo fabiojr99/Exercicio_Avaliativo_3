@@ -20,7 +20,7 @@ int main(void) {
   printf("Usuario, escolha uma letra para substituir\n");
   scanf("%s", LetraNova);
 
-  TrocaCaractere (&PalavraVelha, &Tamanho, &LetraVelha, &LetraNova, &PalavraNova);
+  TrocaCaractere (&PalavraVelha, &Tamanho, LetraVelha, LetraNova, &PalavraNova);
 
   quantidade = ContaTrocas (PalavraVelha, LetraVelha);
 
